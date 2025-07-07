@@ -12,7 +12,7 @@ print("Script started")
 # Create Finnhub client
 finnhub_client = finnhub.Client(api_key="d1lv271r01qksvur9ukgd1lv271r01qksvur9ul0")
 
-SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+SYMBOLS = ['AAPL']  #, 'GOOGL', 'MSFT', 'TSLA']
 
 data = []
 for symbol in SYMBOLS:

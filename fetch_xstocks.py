@@ -9,7 +9,7 @@ SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']  # Add all your symbols here
 
 data = []
 for symbol in SYMBOLS:
-    url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token={API_KEY}'
+    url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token=API_KEY'
     response = requests.get(url)
     print(f"{symbol}: {response.status_code} {response.text}")
     

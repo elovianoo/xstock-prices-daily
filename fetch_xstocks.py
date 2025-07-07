@@ -6,7 +6,7 @@ from datetime import datetime
 print("Script started")
 
 # API_KEY = os.environ.get('FINNHUB_API_KEY')
-API_KEY = 'd1lra9hr01qt4thi06tgd1lra9hr01qt4thi06u0'
+API_KEY = d1lra9hr01qt4thi06tgd1lra9hr01qt4thi06u0
 # print(f"API_KEY loaded: {API_KEY is not None}")
 
 # Create Finnhub client

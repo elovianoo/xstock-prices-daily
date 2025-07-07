@@ -11,6 +11,7 @@ for symbol in SYMBOLS:
     url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token={API_KEY}'
     response = requests.get(url)
     print(f"{symbol}: {response.status_code} {response.text}")
+    print(f"API_KEY used: {API_KEY}")
     if response.status_code == 200:
         quote = response.json()
         quote['symbol'] = symbol

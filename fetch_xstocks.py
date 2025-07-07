@@ -8,7 +8,13 @@ API_KEY = os.environ.get("FINNHUB_API_KEY")
 print(f"API_KEY used: {API_KEY}")
 
 # Full list of symbols extracted from your CSV (without trailing 'x')
-SYMBOLS = ['ABT', 'ABBV', 'ACN', 'GOOGL', 'AMZN', 'AMBR', 'AAPL', 'APP', 'AZN', 'BAC', 'BRK.B', 'AVGO', 'CVX', 'CRCL', 'CSCO', 'KO', 'COIN', 'CMCSA', 'CRWD', 'DHR', 'DFDV', 'LLY', 'XOM', 'GME', 'GLD', 'GS', 'HD', 'HON', 'INTC', 'IBM', 'JNJ', 'JPM', 'LIN', 'MRVL', 'MA', 'MCD', 'MDT', 'MRK', 'META', 'MSFT', 'MSTR', 'QQQ', 'NFLX', 'NVO', 'NVDA', 'ORCL', 'PLTR', 'PEP', 'PFE', 'PM', 'PG', 'HOOD', 'CRM', 'SPY', 'TSLA', 'TMO', 'TQQQ', 'UNH', 'VTI', 'V', 'WMT']
+SYMBOLS = ['ABT', 'ABBV', 'ACN', 'GOOGL', 'AMZN', 'AMBR', 'AAPL', 'APP', 'AZN', 'BAC', 
+           'BRK.B', 'AVGO', 'CVX', 'CRCL', 'CSCO', 'KO', 'COIN', 'CMCSA', 'CRWD', 'DHR', 
+           'DFDV', 'LLY', 'XOM', 'GME', 'GLD', 'GS', 'HD', 'HON', 'INTC', 'IBM', 
+           'JNJ', 'JPM', 'LIN', 'MRVL', 'MA', 'MCD', 'MDT', 'MRK', 'META', 'MSFT', 
+           'MSTR', 'QQQ', 'NFLX', 'NVO', 'NVDA', 'ORCL', 'PLTR', 'PEP', 'PFE', 'PM', 
+           'PG', 'HOOD', 'CRM', 'SPY', 'TSLA', 'TMO', 'TQQQ', 'UNH', 'VTI', 'V', 
+           'WMT']
 
 BATCH_SIZE = 60
 DELAY = 65  # seconds (slightly more than 60 to be safe)

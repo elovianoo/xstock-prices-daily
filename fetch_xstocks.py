@@ -4,6 +4,7 @@ from datetime import datetime
 
 import os
 API_KEY = os.environ.get(FINNHUB_API_KEY)
+print(f"API_KEY used: {API_KEY}")
 SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']  # Add all your symbols here
 
 data = []
@@ -11,7 +12,7 @@ for symbol in SYMBOLS:
     url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token={API_KEY}'
     response = requests.get(url)
     print(f"{symbol}: {response.status_code} {response.text}")
-    print(f"API_KEY used: {API_KEY}")
+    
     if response.status_code == 200:
         quote = response.json()
         quote['symbol'] = symbol

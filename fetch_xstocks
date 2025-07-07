@@ -1,0 +1,19 @@
+import requests
+import json
+from datetime import datetime
+
+API_KEY = 'd1lra9hr01qt4thi06tgd1lra9hr01qt4thi06u0'
+SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']  # Add all your symbols here
+
+data = []
+for symbol in SYMBOLS:
+    url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token={API_KEY}'
+    response = requests.get(url)
+    if response.status_code == 200:
+        quote = response.json()
+        quote['symbol'] = symbol
+        quote['date'] = datetime.now().strftime('%Y-%m-%d')
+        data.append(quote)
+
+with open('stock_data.json', 'w') as f:
+    json.dump(data, f)

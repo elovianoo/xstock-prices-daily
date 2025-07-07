@@ -1,4 +1,5 @@
 import requests
+import json
 
 API_KEY = "d1lv271r01qksvur9ukgd1lv271r01qksvur9ul0"
 SYMBOL = "AAPL"

@@ -38,7 +38,7 @@ from datetime import datetime
 
 # import os
 # API_KEY = os.environ.get(FINNHUB_API_KEY)
-API_KEY = "d1lv271r01qksvur9ukgd1lv271r01qksvur9ul0" #'YOUR_FINNHUB_API_KEY'
+API_KEY = 'FINNHUB_API_KEY'
 print(f"API_KEY used: {API_KEY}")
 SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']  # Add all your symbols here
 

@@ -1,0 +1,26 @@
+name: Daily xStock Data Fetch
+on:
+  schedule:
+    - cron: '0 14 * * *'  # Runs daily at 2 PM UTC
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Fetch xstock data
+        run: python fetch_xstocks.py
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add stock_data.json
+          git commit -m "Update xstock data $(date)" || exit 0
+          git push

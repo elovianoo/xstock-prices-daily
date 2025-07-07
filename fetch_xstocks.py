@@ -1,4 +1,4 @@
-import finnhub
+'''import finnhub
 import json
 import os
 from datetime import datetime
@@ -29,10 +29,10 @@ for symbol in SYMBOLS:
 print(f"Total data collected: {len(data)}")
 with open('stock_data.json', 'w') as f:
     json.dump(data, f)
-print("Script completed")
+print("Script completed")'''
 
 
-'''import requests
+import requests
 import json
 from datetime import datetime
 
@@ -55,4 +55,4 @@ for symbol in SYMBOLS:
         data.append(quote)
 
 with open('stock_data.json', 'w') as f:
-    json.dump(data, f)'''
+    json.dump(data, f)
